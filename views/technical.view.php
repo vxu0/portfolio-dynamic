@@ -6,8 +6,8 @@
     <div class="leading-loose text-base text-gray-600 font-normal space-y-4">
         <?php foreach ($projects as $proj): ?>
             <li>
-                <?php if ($proj['ref']): ?>
-                    <a href=<?= $proj['ref'] ?> target='_blank' rel='noopener noreferrer'
+                <?php if ($proj['url']): ?>
+                    <a href=<?= $proj['url'] ?> target='_blank' rel='noopener noreferrer'
                         class='font-bold bg-blue-100 underline decoration-wavy decoration-gray-400 hover:bg-blue-200 hover:decoration-gray-500'>
                         <?= $proj['title'] ?></a>
                 <?php else: ?>
@@ -19,7 +19,7 @@
                 <span class="text-gray-400 italic"> —
                     <?php print_r($proj['tools']); ?>
                 </span>
-                <p class='pl-8'><?= $proj['description'] ?>
+                <p class='pl-8'><?= $proj['desc'] ?>
                 </p>
             </li>
         <?php endforeach; ?>
