@@ -2,8 +2,7 @@
 
 $config = require 'config.php';
 
-// $db = new Database($config['database']);
-$db = new Database();
+$db = new Database($config['database']);
 
 $visuals = $db->query("select * from visual_pieces", [])->fetchAll();
 $notes = $db->query("select * from written_pieces", [])->fetchAll();
