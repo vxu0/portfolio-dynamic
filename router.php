@@ -12,7 +12,7 @@ $routes = [
 
 function routeToController($uri, $routes)
 {
-    echo "<script>console.log($uri);</script>";
+    echo "<script>console.log('uri:' . $uri);</script>";
     if (array_key_exists($uri, $routes)) {
         require $routes[$uri];
     } else {
