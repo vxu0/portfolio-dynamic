@@ -1,6 +1,7 @@
 <?php
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+echo "<script>console.log('uri:' . $uri);</script>";
 
 $routes = [
     '/' => 'controllers/index.php',
@@ -12,7 +13,6 @@ $routes = [
 
 function routeToController($uri, $routes)
 {
-    echo "<script>console.log('uri:' . $uri);</script>";
     if (array_key_exists($uri, $routes)) {
         require $routes[$uri];
     } else {
