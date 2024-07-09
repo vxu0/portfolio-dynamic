@@ -1,8 +1,7 @@
 <?php
 
 $config = require 'config.php';
-// $db = new Database($config['database'], $config['database']['user'], $config['database']['pass']);
-$db = new Database();
+$db = new Database($config['database'], $config['database']['user'], $config['database']['pass']);
 
 $projects = $db->query("select * from tech_projects order by date desc", [])->fetchAll();
 
